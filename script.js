@@ -1,50 +1,5 @@
-// --- Game Data (Questions) ---
 const questions = [
   {
-<<<<<<< HEAD
-    question: "1. In Speed (1994), what happens if the bus drops below 50 mph?",
-    answers: [
-      { text: "It shuts down", correct: false },
-      { text: "It explodes", correct: true },
-      { text: "It loses power", correct: false },
-      { text: "It changes direction", correct: false }
-    ]
-  },
-  {
-    question: "2. Which 1996 alien-invasion film starred Will Smith?",
-    answers: [
-      { text: "Men in Black", correct: false },
-      { text: "Armageddon", correct: false },
-      { text: "Independence Day", correct: true },
-      { text: "Galaxy Quest", correct: false }
-    ]
-  },
-  {
-    question: "3. Which 1995 movie features toys that come to life when humans aren’t around?",
-    answers: [
-      { text: "Small Soldiers", correct: false },
-      { text: "Toy Story", correct: true },
-      { text: "Jumanji", correct: false },
-      { text: "Casper", correct: false }
-    ]
-  },
-  {
-    question: "4. In The Bodyguard (1992), who plays the role of the bodyguard?",
-    answers: [
-      { text: "Kevin Costner", correct: true },
-      { text: "Bruce Willis", correct: false },
-      { text: "Patrick Swayze", correct: false },
-      { text: "Mel Gibson", correct: false }
-    ]
-  },
-  {
-    question: "5. In The Fifth Element (1997), what is the name of the character played by Milla Jovovich?",
-    answers: [
-      { text: "Trinity", correct: false },
-      { text: "Leeloo", correct: true },
-      { text: "Korben", correct: false },
-      { text: "Ripley", correct: false }
-=======
     question: "1. Which actress starred as Sarah Connor in Terminator 2: Judgment Day (1991)?",
     answers: [
       { text: "Sigourney Weaver", correct: false },
@@ -114,7 +69,6 @@ const questions = [
       { text: "A feather", correct: true },
       { text: "His running shoes", correct: false },
       { text: "A Vietnam War medal", correct: false }
->>>>>>> 11972a59cdece812d69d16fd7edae7559f3b8449
     ]
   }
 ];
@@ -251,7 +205,7 @@ function endGame() {
       console.log("Score submitted successfully!");
   })
   .catch(error => {
-      console.error("Firebase error: ", error);
+      console.error("Firebase write error: ", error);
       // Optional: Alert player if submission failed
   });
   
@@ -280,9 +234,10 @@ function displayLiveLeaderboard() {
         .then((snapshot) => {
             const scoresObject = snapshot.val();
             if (!scoresObject) {
+                // If database is empty, display message instead of hanging
                 resultsDiv.innerHTML = '<h2>No Scores Yet! Be the first to play!</h2><button id="return-btn" class="start-btn btn">Start Playing</button>';
                 document.getElementById('return-btn').addEventListener('click', startNewGame);
-                return;
+                return; 
             }
             
             // Convert Firebase object to array of scores and keys
@@ -308,7 +263,7 @@ function displayLiveLeaderboard() {
             });
             
             leaderboardHTML += '</tbody></table>';
-            // Add a button to refresh the data
+            // Add buttons
             leaderboardHTML += '<button id="refresh-leaderboard-btn" class="start-btn btn" style="margin-top: 20px;">Refresh Leaderboard</button>';
             leaderboardHTML += '<button id="return-to-start-btn" class="start-btn btn" style="margin-top: 20px; margin-left: 10px;">Return to Start Screen</button>';
 
@@ -317,7 +272,9 @@ function displayLiveLeaderboard() {
             document.getElementById('refresh-leaderboard-btn').addEventListener('click', displayLiveLeaderboard);
         })
         .catch(error => {
-            resultsDiv.innerHTML = `<p>Error fetching leaderboard. Check console for details.</p>`;
-            console.error('Firebase Fetch Error:', error);
+            // Log error if fetch fails for any reason
+            resultsDiv.innerHTML = `<p>Error fetching leaderboard. Check console for network errors.</p>`;
+            console.error('Firebase Fetch Error: ', error);
         });
+}
 }
