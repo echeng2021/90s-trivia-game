@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90s Blockbuster Trivia - Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="trivia-container">
+  <h1>90s Blockbuster Challenge! 🍿</h1>
+  
+  <p id="player-status-text" class="hide"></p> 
+  
+  <div id="question-container" class="question-box hide">
+    <p id="question-text">The question will appear here.</p>
+    <div id="answer-buttons" class="btn-grid">
+      </div>
+  </div>
+  
+  <div id="controls">
+    <div id="name-input-container">
+      <label for="player-name">Enter Your Name:</label>
+      <input type="text" id="player-name" placeholder="e.g., Alex or Team A" required>
+    </div>
+    <button id="start-btn" class="start-btn btn">Start Game</button>
+    <button id="show-leaderboard-btn" class="start-btn btn" style="margin-left: 10px;">View Live Leaderboard</button>
+  </div>
+  
+  <div id="results" class="hide">
+    </div>
+  
+  <div id="individual-result" class="hide">
+      <h2 id="individual-name"></h2>
+      <p>Your Score: <span id="individual-score"></span></p>
+      <p style="font-weight: bold; color: green;">Your score has been submitted to the leaderboard!</p>
+      <button id="start-new-btn" class="start-btn btn">Start A New Game</button>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<script>
+  // This is the working v8 syntax compatible with the SDKs loaded above.
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com", 
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+  
+  // Initialize Firebase using the global 'firebase' object (v8 syntax)
+  firebase.initializeApp(firebaseConfig);
+  // Get a reference to the Realtime Database instance
+  const db = firebase.database(); 
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
