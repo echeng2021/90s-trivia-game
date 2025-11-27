@@ -1,48 +1,75 @@
 // --- Game Data (Questions) ---
 const questions = [
   {
-    question: "1. In Speed (1994), what happens if the bus drops below 50 mph?",
+    question: "1. Which actress starred as Sarah Connor in Terminator 2: Judgment Day (1991)?",
     answers: [
-      { text: "It shuts down", correct: false },
-      { text: "It explodes", correct: true },
-      { text: "It loses power", correct: false },
-      { text: "It changes direction", correct: false }
+      { text: "Sigourney Weaver", correct: false },
+      { text: "Linda Hamilton", correct: true },
+      { text: "Jamie Lee Curtis", correct: false },
+      { text: "Sharon Stone", correct: false }
     ]
   },
   {
-    question: "2. Which 1996 alien-invasion film starred Will Smith?",
+    question: "2. In Men in Black (1997), what is Agent K's (Tommy Lee Jones) civilian name?",
     answers: [
-      { text: "Men in Black", correct: false },
-      { text: "Armageddon", correct: false },
-      { text: "Independence Day", correct: true },
-      { text: "Galaxy Quest", correct: false }
+      { text: "Kevin Brown", correct: true },
+      { text: "Kayle Johnson", correct: false },
+      { text: "Kevin Flynn", correct: false },
+      { text: "Will Smith", correct: false }
     ]
   },
   {
-    question: "3. Which 1995 movie features toys that come to life when humans aren’t around?",
+    question: "3. In Pulp Fiction (1994), what does Vincent Vega stab Mia Wallace with to revive her?",
     answers: [
-      { text: "Small Soldiers", correct: false },
-      { text: "Toy Story", correct: true },
-      { text: "Jumanji", correct: false },
-      { text: "Casper", correct: false }
+      { text: "A Syringe", correct: false },
+      { text: "An Epinephrine Pen", correct: true },
+      { text: "A Knife", correct: false },
+      { text: "A Corkscrew", correct: false }
     ]
   },
   {
-    question: "4. In The Bodyguard (1992), who plays the role of the bodyguard?",
+    question: "4. Which action star played the title character in the film Demolition Man (1993)?",
     answers: [
-      { text: "Kevin Costner", correct: true },
-      { text: "Bruce Willis", correct: false },
-      { text: "Patrick Swayze", correct: false },
-      { text: "Mel Gibson", correct: false }
+      { text: "Arnold Schwarzenegger", correct: false },
+      { text: "Jean-Claude Van Damme", correct: false },
+      { text: "Sylvester Stallone", correct: true },
+      { text: "Bruce Willis", correct: false }
     ]
   },
   {
-    question: "5. In The Fifth Element (1997), what is the name of the character played by Milla Jovovich?",
+    question: "5. What is the name of the main computer virus that infects the alien ships in Independence Day (1996)?",
     answers: [
-      { text: "Trinity", correct: false },
-      { text: "Leeloo", correct: true },
-      { text: "Korben", correct: false },
-      { text: "Ripley", correct: false }
+      { text: "The Morpheus virus", correct: false },
+      { text: "A computer virus", correct: true },
+      { text: "Cyberdyne", correct: false },
+      { text: "Skynet", correct: false }
+    ]
+  },
+  {
+    question: "6. Which popular animated Disney film released in 1994 features the song 'Can You Feel the Love Tonight'?",
+    answers: [
+      { text: "Aladdin", correct: false },
+      { text: "Pocahontas", correct: false },
+      { text: "The Lion King", correct: true },
+      { text: "Beauty and the Beast", correct: false }
+    ]
+  },
+  {
+    question: "7. The movie Face/Off (1997) features which two actors swapping identities?",
+    answers: [
+      { text: "Brad Pitt and Edward Norton", correct: false },
+      { text: "Tom Cruise and Brad Pitt", correct: false },
+      { text: "John Travolta and Nicolas Cage", correct: true },
+      { text: "Harrison Ford and Gary Oldman", correct: false }
+    ]
+  },
+  {
+    question: "8. What iconic prop does Tom Hanks' character retrieve from the water in Forrest Gump (1994)?",
+    answers: [
+      { text: "A Box of Chocolates", correct: false },
+      { text: "A feather", correct: true },
+      { text: "His running shoes", correct: false },
+      { text: "A Vietnam War medal", correct: false }
     ]
   }
 ];
