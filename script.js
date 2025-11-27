@@ -1,6 +1,7 @@
 // --- Game Data (Questions) ---
 const questions = [
   {
+<<<<<<< HEAD
     question: "1. In Speed (1994), what happens if the bus drops below 50 mph?",
     answers: [
       { text: "It shuts down", correct: false },
@@ -43,6 +44,77 @@ const questions = [
       { text: "Leeloo", correct: true },
       { text: "Korben", correct: false },
       { text: "Ripley", correct: false }
+=======
+    question: "1. Which actress starred as Sarah Connor in Terminator 2: Judgment Day (1991)?",
+    answers: [
+      { text: "Sigourney Weaver", correct: false },
+      { text: "Linda Hamilton", correct: true },
+      { text: "Jamie Lee Curtis", correct: false },
+      { text: "Sharon Stone", correct: false }
+    ]
+  },
+  {
+    question: "2. In Men in Black (1997), what is Agent K's (Tommy Lee Jones) civilian name?",
+    answers: [
+      { text: "Kevin Brown", correct: true },
+      { text: "Kayle Johnson", correct: false },
+      { text: "Kevin Flynn", correct: false },
+      { text: "Will Smith", correct: false }
+    ]
+  },
+  {
+    question: "3. In Pulp Fiction (1994), what does Vincent Vega stab Mia Wallace with to revive her?",
+    answers: [
+      { text: "A Syringe", correct: false },
+      { text: "An Epinephrine Pen", correct: true },
+      { text: "A Knife", correct: false },
+      { text: "A Corkscrew", correct: false }
+    ]
+  },
+  {
+    question: "4. Which action star played the title character in the film Demolition Man (1993)?",
+    answers: [
+      { text: "Arnold Schwarzenegger", correct: false },
+      { text: "Jean-Claude Van Damme", correct: false },
+      { text: "Sylvester Stallone", correct: true },
+      { text: "Bruce Willis", correct: false }
+    ]
+  },
+  {
+    question: "5. What is the name of the main computer virus that infects the alien ships in Independence Day (1996)?",
+    answers: [
+      { text: "The Morpheus virus", correct: false },
+      { text: "A computer virus", correct: true },
+      { text: "Cyberdyne", correct: false },
+      { text: "Skynet", correct: false }
+    ]
+  },
+  {
+    question: "6. Which popular animated Disney film released in 1994 features the song 'Can You Feel the Love Tonight'?",
+    answers: [
+      { text: "Aladdin", correct: false },
+      { text: "Pocahontas", correct: false },
+      { text: "The Lion King", correct: true },
+      { text: "Beauty and the Beast", correct: false }
+    ]
+  },
+  {
+    question: "7. The movie Face/Off (1997) features which two actors swapping identities?",
+    answers: [
+      { text: "Brad Pitt and Edward Norton", correct: false },
+      { text: "Tom Cruise and Brad Pitt", correct: false },
+      { text: "John Travolta and Nicolas Cage", correct: true },
+      { text: "Harrison Ford and Gary Oldman", correct: false }
+    ]
+  },
+  {
+    question: "8. What iconic prop does Tom Hanks' character retrieve from the water in Forrest Gump (1994)?",
+    answers: [
+      { text: "A Box of Chocolates", correct: false },
+      { text: "A feather", correct: true },
+      { text: "His running shoes", correct: false },
+      { text: "A Vietnam War medal", correct: false }
+>>>>>>> 11972a59cdece812d69d16fd7edae7559f3b8449
     ]
   }
 ];
